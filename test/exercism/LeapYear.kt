@@ -1,9 +1,10 @@
 package exercism
 
-import lib.*
-import org.junit.jupiter.api.*
+import lib.isDivisibleBy
+import lib.isNotDivisibleBy
 import org.junit.jupiter.api.Assertions.assertFalse
 import org.junit.jupiter.api.Assertions.assertTrue
+import org.junit.jupiter.api.Test
 
 /**
  * https://exercism.io/tracks/kotlin/exercises/leap

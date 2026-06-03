@@ -1,6 +1,7 @@
 package leetcode
 
-import leetcode.SquareColor.*
+import leetcode.SquareColor.BLACK
+import leetcode.SquareColor.WHITE
 import lib.isEven
 import lib.require
 import org.assertj.core.api.Assertions.assertThat

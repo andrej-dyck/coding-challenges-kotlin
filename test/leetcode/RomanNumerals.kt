@@ -1,14 +1,15 @@
 package leetcode
 
-import lib.*
-import net.jqwik.api.*
-import org.assertj.core.api.Assertions.*
-import org.junit.jupiter.api.*
-import org.junit.jupiter.params.*
-import org.junit.jupiter.params.provider.*
-import java.util.regex.*
-import kotlin.system.*
-import kotlin.time.*
+import net.jqwik.api.Arbitraries
+import net.jqwik.api.Arbitrary
+import net.jqwik.api.ForAll
+import net.jqwik.api.Property
+import net.jqwik.api.Provide
+import org.assertj.core.api.Assertions.assertThat
+import org.junit.jupiter.api.assertThrows
+import org.junit.jupiter.params.ParameterizedTest
+import org.junit.jupiter.params.provider.CsvSource
+import org.junit.jupiter.params.provider.ValueSource
 
 /**
  * https://leetcode.com/problems/integer-to-roman/
@@ -46,8 +47,9 @@ import kotlin.time.*
  * Constraints:
  * - 1 <= num <= 3999
  */
+@Suppress("CyclomaticComplexMethod")
 fun Int.toRoman(): String {
-    require(this in (1..3999))
+    require(this in 1..3999)
 
     tailrec fun reverseRN(rn: String, n: Int): String = when {
         n >= 1000 -> reverseRN("M$rn", n - 1000)

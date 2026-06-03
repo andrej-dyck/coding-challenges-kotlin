@@ -1,5 +1,6 @@
 .jqwik-database
 detekt/
+.kotlin
 
 # Created by https://www.toptal.com/developers/gitignore/api/linux,macos,gradle,windows,intellij+all
 # Edit at https://www.toptal.com/developers/gitignore?templates=linux,macos,gradle,windows,intellij+all

@@ -1,9 +1,10 @@
 package exercism
 
-import lib.*
-import org.junit.*
-import org.junit.jupiter.api.*
+import lib.isEven
+import lib.isOdd
 import org.junit.jupiter.api.Assertions.assertEquals
+import org.junit.jupiter.api.Test
+import org.junit.jupiter.api.assertThrows
 
 /**
  * https://exercism.io/tracks/kotlin/exercises/collatz-conjecture

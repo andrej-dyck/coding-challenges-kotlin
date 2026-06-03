@@ -1,9 +1,8 @@
 package leetcode
 
-import lib.*
 import org.assertj.core.api.Assertions.assertThat
-import org.junit.jupiter.params.*
-import org.junit.jupiter.params.provider.*
+import org.junit.jupiter.params.ParameterizedTest
+import org.junit.jupiter.params.provider.CsvSource
 
 /**
  * https://leetcode.com/problems/first-bad-version/
@@ -27,7 +26,7 @@ import org.junit.jupiter.params.provider.*
  * - 1 <= bad <= n <= 2^31 - 1
  */
 fun firstBadVersion(n: Int, isBadVersion: (v: Int) -> Boolean) =
-     binarySearch(1..n, isBadVersion)
+    binarySearch(1..n, isBadVersion)
 
 tailrec fun binarySearch(range: IntRange, isBefore: (mid: Int) -> Boolean): Int =
     if (range.count() == 1) range.first

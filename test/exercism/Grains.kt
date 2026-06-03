@@ -1,8 +1,9 @@
 package exercism
 
-import org.junit.jupiter.api.*
 import org.junit.jupiter.api.Assertions.assertEquals
-import java.math.*
+import org.junit.jupiter.api.Test
+import org.junit.jupiter.api.assertThrows
+import java.math.BigInteger
 
 /**
  * https://exercism.io/tracks/kotlin/exercises/grains

@@ -1,8 +1,8 @@
 package exercism
 
-import org.junit.jupiter.api.*
 import org.junit.jupiter.api.Assertions.assertEquals
-import kotlin.math.*
+import org.junit.jupiter.api.Test
+import kotlin.math.sqrt
 
 /**
  * https://exercism.io/tracks/kotlin/exercises/sieve

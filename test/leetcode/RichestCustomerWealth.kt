@@ -1,11 +1,10 @@
 package leetcode
 
-import lib.*
-import org.assertj.core.api.*
+import lib.IntMatrixArg
 import org.assertj.core.api.Assertions.assertThat
-import org.junit.jupiter.params.*
-import org.junit.jupiter.params.converter.*
-import org.junit.jupiter.params.provider.*
+import org.junit.jupiter.params.ParameterizedTest
+import org.junit.jupiter.params.converter.ConvertWith
+import org.junit.jupiter.params.provider.CsvSource
 
 /**
  * https://leetcode.com/problems/richest-customer-wealth/

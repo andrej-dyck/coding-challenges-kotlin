@@ -19,12 +19,11 @@ inline fun <T : Comparable<T>> Collection<T>.maxOr(otherwise: () -> T) =
 inline fun <T : Comparable<T>> Collection<T>.minOr(otherwise: () -> T) =
     minOrNull() ?: otherwise()
 
-inline fun <reified T> Array<T>.headTails() = firstOrNull() to (drop(1).toTypedArray())
+inline fun <reified T> Array<T>.headTails() = firstOrNull() to drop(1).toTypedArray()
 
 // Sequence Extensions
 fun <T> Sequence<T>.headTails() = firstOrNull() to drop(1)
 fun <T> Sequence<T>.cycle() = generateSequence(this) { this }.flatten()
-
 
 // Number Extensions
 fun Int.isEven() = this % 2 == 0

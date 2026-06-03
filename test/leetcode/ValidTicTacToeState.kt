@@ -1,10 +1,10 @@
 package leetcode
 
-import lib.*
+import lib.formattedString
+import lib.toArray
 import org.assertj.core.api.Assertions.assertThat
-import org.junit.jupiter.params.*
-import org.junit.jupiter.params.converter.*
-import org.junit.jupiter.params.provider.*
+import org.junit.jupiter.params.ParameterizedTest
+import org.junit.jupiter.params.provider.ValueSource
 
 /**
  * https://leetcode.com/problems/valid-tic-tac-toe-state/

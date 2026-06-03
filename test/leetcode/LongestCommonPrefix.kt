@@ -1,10 +1,10 @@
 package leetcode
 
-import lib.*
-import org.assertj.core.api.*
-import org.junit.jupiter.params.*
-import org.junit.jupiter.params.converter.*
-import org.junit.jupiter.params.provider.*
+import lib.StringArrayArg
+import org.assertj.core.api.Assertions
+import org.junit.jupiter.params.ParameterizedTest
+import org.junit.jupiter.params.converter.ConvertWith
+import org.junit.jupiter.params.provider.CsvSource
 
 /**
  * https://leetcode.com/problems/longest-common-prefix/

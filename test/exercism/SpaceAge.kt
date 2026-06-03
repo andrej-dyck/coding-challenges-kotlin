@@ -1,8 +1,8 @@
 package exercism
 
-import lib.*
-import org.junit.jupiter.api.*
+import lib.round
 import org.junit.jupiter.api.Assertions.assertEquals
+import org.junit.jupiter.api.Test
 
 /**
  * https://exercism.io/tracks/kotlin/exercises/space-age

@@ -5,9 +5,16 @@
 This repository contains some short coding exercises solved in Kotlin.
 
 ### Build & Check
+```shell
+./gradlew check
 ```
-./gradlew build
+
+### Linting
+Runs with `check`, but you can also run it separately with
+```shell
+./gradlew detekt
 ```
+This runs [Detekt](https://detekt.github.io/detekt/), a static code analysis tool for Kotlin, with a stricter rule set (cf. [detekt.yml](./detekt.yml)).
 
 ### LeetCode Problems
 

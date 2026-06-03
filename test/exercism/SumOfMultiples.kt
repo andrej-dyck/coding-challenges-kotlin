@@ -1,7 +1,7 @@
 package exercism
 
-import org.junit.jupiter.api.*
 import org.junit.jupiter.api.Assertions.assertEquals
+import org.junit.jupiter.api.Test
 
 /**
  * https://exercism.io/tracks/kotlin/exercises/sum-of-multiples

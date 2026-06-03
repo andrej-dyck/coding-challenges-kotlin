@@ -1,9 +1,9 @@
 package exercism
 
-import lib.*
+import lib.isDivisibleBy
 import org.junit.jupiter.api.Assertions.assertEquals
-import org.junit.jupiter.params.*
-import org.junit.jupiter.params.provider.*
+import org.junit.jupiter.params.ParameterizedTest
+import org.junit.jupiter.params.provider.CsvSource
 
 /**
  * https://exercism.io/tracks/kotlin/exercises/raindrops

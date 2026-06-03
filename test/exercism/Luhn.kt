@@ -1,9 +1,11 @@
 package exercism
 
-import lib.*
-import org.junit.jupiter.api.*
+import lib.isDigit
+import lib.isEven
+import lib.isMultipleOf
 import org.junit.jupiter.api.Assertions.assertFalse
 import org.junit.jupiter.api.Assertions.assertTrue
+import org.junit.jupiter.api.Test
 
 /**
  * https://exercism.io/tracks/kotlin/exercises/luhn

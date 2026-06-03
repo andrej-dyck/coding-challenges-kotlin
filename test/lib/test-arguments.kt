@@ -1,6 +1,6 @@
 package lib
 
-import org.junit.jupiter.params.converter.*
+import org.junit.jupiter.params.converter.TypedArgumentConverter
 
 class IntArrayArg : TypedArgumentConverter<String, Array<Int>>(
     String::class.java, Array<Int>::class.java

@@ -1,8 +1,9 @@
 package exercism
 
-import lib.*
-import org.junit.jupiter.api.*
+import lib.isDivisibleBy
 import org.junit.jupiter.api.Assertions.assertEquals
+import org.junit.jupiter.api.Test
+import org.junit.jupiter.api.assertThrows
 
 /**
  * https://exercism.io/tracks/kotlin/exercises/perfect-numbers

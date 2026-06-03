@@ -1,7 +1,7 @@
 package exercism
 
-import org.junit.jupiter.api.*
 import org.junit.jupiter.api.Assertions.assertEquals
+import org.junit.jupiter.api.Test
 
 /**
  * https://exercism.io/tracks/kotlin/exercises/rna-transcription
@@ -15,7 +15,7 @@ fun transcribeToRna(dna: String) =
     dna.map { transcribeToRna(it) }.joinToString(separator = "")
 
 fun transcribeToRna(dnaNucleotide: Char) =
-    when(dnaNucleotide) {
+    when (dnaNucleotide) {
         'C' -> 'G'
         'G' -> 'C'
         'T' -> 'A'

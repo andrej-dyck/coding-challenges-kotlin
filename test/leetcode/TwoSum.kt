@@ -38,7 +38,7 @@ private tailrec fun twoSumRec(
 ): Pair<Int, Int>? {
     val (head, tails) = nums.firstOrNull() to nums.drop(1)
 
-    return if(head == null) null
+    return if (head == null) null
     else when (val otherIndex = seenValues[target - head.value]) {
         null -> twoSumRec(tails, target, seenValues = seenValues + (head.value to head.index))
         else -> otherIndex to head.index

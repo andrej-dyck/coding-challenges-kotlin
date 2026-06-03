@@ -1,11 +1,14 @@
 package leetcode
 
-import lib.*
-import net.jqwik.api.*
+import lib.IntArrayArg
+import net.jqwik.api.Arbitraries
+import net.jqwik.api.ForAll
+import net.jqwik.api.Property
+import net.jqwik.api.Provide
 import org.assertj.core.api.Assertions.assertThat
-import org.junit.jupiter.params.*
-import org.junit.jupiter.params.converter.*
-import org.junit.jupiter.params.provider.*
+import org.junit.jupiter.params.ParameterizedTest
+import org.junit.jupiter.params.converter.ConvertWith
+import org.junit.jupiter.params.provider.CsvSource
 
 /**
  * https://leetcode.com/problems/missing-number/
@@ -25,7 +28,7 @@ import org.junit.jupiter.params.provider.*
  * - All the numbers of nums are unique.
  */
 fun missingNumber(nums: List<Int>) = sum0ToN(nums.size) - nums.sum()
-fun sum0ToN(n: Int) = (n * (n + 1)) / 2 // gauss summation
+fun sum0ToN(n: Int) = n * (n + 1) / 2 // gauss summation
 
 /**
  * What if there are multiple missing numbers?

@@ -1,9 +1,9 @@
 package leetcode
 
-import lib.*
+import lib.maxOr
 import org.assertj.core.api.Assertions.assertThat
-import org.junit.jupiter.params.*
-import org.junit.jupiter.params.provider.*
+import org.junit.jupiter.params.ParameterizedTest
+import org.junit.jupiter.params.provider.CsvSource
 
 /**
  * https://leetcode.com/problems/maximum-number-of-vowels-in-a-substring-of-given-length/

@@ -67,9 +67,10 @@ class WordWrapTest {
     fun `multiple lines are wrapped by wrapping each single line`() {
         assertThat(
             WordWrap(12).wrap(
-                """|I am a few words too long!
-                   |I'm ok.
-                   |But this is definitely too long...!
+                """
+                    I am a few words too long!
+                    I'm ok.
+                    But this is definitely too long...!
                 """.trimMargin()
             )
         ).containsExactly(

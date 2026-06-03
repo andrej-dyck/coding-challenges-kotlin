@@ -1,7 +1,7 @@
 package exercism
 
-import org.junit.jupiter.api.*
 import org.junit.jupiter.api.Assertions.assertEquals
+import org.junit.jupiter.api.Test
 
 /**
  * https://exercism.io/tracks/kotlin/exercises/secret-handshake
@@ -52,83 +52,95 @@ class HandshakeCalculatorTest {
     fun testThatInput1YieldsAWink() {
         assertEquals(
             listOf(Signal.WINK),
-            HandshakeCalculator.calculateHandshake(1))
+            HandshakeCalculator.calculateHandshake(1)
+        )
     }
 
     @Test
     fun testThatInput2YieldsADoubleBlink() {
         assertEquals(
             listOf(Signal.DOUBLE_BLINK),
-            HandshakeCalculator.calculateHandshake(2))
+            HandshakeCalculator.calculateHandshake(2)
+        )
     }
 
     @Test
     fun testThatInput4YieldsACloseYourEyes() {
         assertEquals(
             listOf(Signal.CLOSE_YOUR_EYES),
-            HandshakeCalculator.calculateHandshake(4))
+            HandshakeCalculator.calculateHandshake(4)
+        )
     }
 
     @Test
     fun testThatInput8YieldsAJump() {
         assertEquals(
             listOf(Signal.JUMP),
-            HandshakeCalculator.calculateHandshake(8))
+            HandshakeCalculator.calculateHandshake(8)
+        )
     }
 
     @Test
     fun testAnInputThatYieldsTwoActions() {
         assertEquals(
             listOf(Signal.WINK, Signal.DOUBLE_BLINK),
-            HandshakeCalculator.calculateHandshake(3))
+            HandshakeCalculator.calculateHandshake(3)
+        )
     }
 
     @Test
     fun testAnInputThatYieldsTwoReversedActions() {
         assertEquals(
             listOf(Signal.DOUBLE_BLINK, Signal.WINK),
-            HandshakeCalculator.calculateHandshake(19))
+            HandshakeCalculator.calculateHandshake(19)
+        )
     }
 
     @Test
     fun testReversingASingleActionYieldsTheSameAction() {
         assertEquals(
             listOf(Signal.JUMP),
-            HandshakeCalculator.calculateHandshake(24))
+            HandshakeCalculator.calculateHandshake(24)
+        )
     }
 
     @Test
     fun testReversingNoActionsYieldsNoActions() {
         assertEquals(
             emptyList<Signal>(),
-            HandshakeCalculator.calculateHandshake(16))
+            HandshakeCalculator.calculateHandshake(16)
+        )
     }
 
     @Test
     fun testInputThatYieldsAllActions() {
         assertEquals(
             listOf(Signal.WINK, Signal.DOUBLE_BLINK, Signal.CLOSE_YOUR_EYES, Signal.JUMP),
-            HandshakeCalculator.calculateHandshake(15))
+            HandshakeCalculator.calculateHandshake(15)
+        )
     }
 
     @Test
     fun testInputThatYieldsAllActionsReversed() {
         assertEquals(
             listOf(Signal.JUMP, Signal.CLOSE_YOUR_EYES, Signal.DOUBLE_BLINK, Signal.WINK),
-            HandshakeCalculator.calculateHandshake(31))
+            HandshakeCalculator.calculateHandshake(31)
+        )
     }
 
     @Test
     fun testThatInput0YieldsNoActions() {
         assertEquals(
             emptyList<Signal>(),
-            HandshakeCalculator.calculateHandshake(0))
+            HandshakeCalculator.calculateHandshake(0)
+        )
     }
 
     @Test
     fun testThatInputWithLower5BitsNotSetYieldsNoActions() {
         assertEquals(
             emptyList<Signal>(),
-            HandshakeCalculator.calculateHandshake(32))
+            HandshakeCalculator.calculateHandshake(32)
+        )
     }
 }

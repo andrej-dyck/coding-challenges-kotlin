@@ -1,9 +1,11 @@
 package exercism
 
-import org.junit.jupiter.api.Assertions.*
+import org.junit.jupiter.api.Assertions.assertEquals
+import org.junit.jupiter.api.Assertions.assertNotEquals
+import org.junit.jupiter.api.Assertions.assertTrue
 import org.junit.jupiter.api.Test
 import java.math.BigInteger
-import java.util.*
+import java.util.Random
 
 object DiffieHellman {
 

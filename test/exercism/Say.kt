@@ -15,7 +15,7 @@ import org.junit.jupiter.api.assertThrows
 class NumberSpeller {
 
     fun say(number: Long): String {
-        require(number in (0..999_999_999_999L))
+        require(number in 0..999_999_999_999L)
 
         return number
             .chunksOfThousands()
@@ -35,13 +35,13 @@ class NumberSpeller {
         number < 10 ->
             sayDigit(number)
 
-        number in (10..19) ->
+        number in 10..19 ->
             sayTeens(number)
 
-        number in (20..99) ->
+        number in 20..99 ->
             sayTens(number / 10) + sayDigit(number % 10).prependWith('-')
 
-        number in (100..999) ->
+        number in 100..999 ->
             sayHundreds(number / 100) + sayUpToThousand(number % 100).prependWith(' ')
 
         else -> throw IllegalArgumentException("expected number in 0..999")
