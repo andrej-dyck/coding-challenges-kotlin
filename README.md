@@ -73,6 +73,7 @@ _Note:_ With these exercises my goal was to design proper object-oriented code.
 * [Perfect Numbers](test/exercism/PerfectNumbers.kt)
 * [Raindrops](test/exercism/Raindrops.kt)
 * [RNA Transcription](test/exercism/RnaTranscription.kt)
+* [RNA Translation](test/exercism/RnaTranslation.kt)
 * [Run Length Encoding](test/exercism/RunLengthEncoding.kt)
 * [Say](test/exercism/Say.kt)
 * [Secret Handshake](test/exercism/SecretHandshake.kt)
