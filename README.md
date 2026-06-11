@@ -66,6 +66,7 @@ _Note:_ With these exercises my goal was to design proper object-oriented code.
 * [Gigasecond](test/exercism/Gigasecond.kt)
 * [Grains](test/exercism/Grains.kt)
 * [Hamming](test/exercism/Hamming.kt)
+* [Isogram](test/exercism/Isogram.kt)
 * [Largest Series Product](test/exercism/LargesSeriesProduct.kt)
 * [Leap](test/exercism/LeapYear.kt)
 * [Luhn](test/exercism/Luhn.kt)
