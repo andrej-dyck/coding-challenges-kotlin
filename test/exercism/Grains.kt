@@ -16,41 +16,15 @@ import java.math.BigInteger
  */
 object Board {
 
-    fun getGrainCountForSquare(square: Int) =
-        GrainsOnSquare(square).value
-
-    fun getTotalGrainCount() =
-        SumOfGrainsUpTo(square = 64).value
-}
-
-class GrainsOnSquare(square: Int) :
-    LargeInteger by PowerOfTwo(square - 1) {
-
-    init {
+    fun getGrainCountForSquare(square: Int): BigInteger {
         require(square in 1..64) {
             "Only integers between 1 and 64 (inclusive) are allowed"
         }
+        return BigInteger.TWO.pow(square - 1)
     }
-}
 
-class SumOfGrainsUpTo(square: Int) :
-    LargeInteger by Difference(PowerOfTwo(square), ValueOf(1))
-
-interface LargeInteger {
-    val value: BigInteger
-}
-
-class PowerOfTwo(exponent: Int) :
-    LargeInteger by ValueOf({ BigInteger.TWO.pow(exponent) })
-
-class Difference(minuend: LargeInteger, subtrahend: LargeInteger) :
-    LargeInteger by ValueOf({ minuend.value - subtrahend.value })
-
-class ValueOf(lazyValue: () -> BigInteger) : LargeInteger {
-
-    override val value by lazy(lazyValue)
-
-    constructor(value: Int) : this({ value.toBigInteger() })
+    fun getTotalGrainCount() =
+        BigInteger.TWO.pow(64) - BigInteger.ONE
 }
 
 /**
@@ -95,7 +69,7 @@ class BoardTest {
 
     @Test
     fun testSquare0IsInvalid() {
-        assertThrows<java.lang.IllegalArgumentException>(
+        assertThrows<IllegalArgumentException>(
             message = "Only integers between 1 and 64 (inclusive) are allowed"
         ) {
             Board.getGrainCountForSquare(0)
@@ -104,7 +78,7 @@ class BoardTest {
 
     @Test
     fun testNegativeSquareIsInvalid() {
-        assertThrows<java.lang.IllegalArgumentException>(
+        assertThrows<IllegalArgumentException>(
             message = "Only integers between 1 and 64 (inclusive) are allowed"
         ) {
             Board.getGrainCountForSquare(-1)
@@ -113,7 +87,7 @@ class BoardTest {
 
     @Test
     fun testSquareGreaterThan64IsInvalid() {
-        assertThrows<java.lang.IllegalArgumentException>(
+        assertThrows<IllegalArgumentException>(
             message = "Only integers between 1 and 64 (inclusive) are allowed"
         ) {
             Board.getGrainCountForSquare(65)
